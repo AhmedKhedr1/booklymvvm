@@ -1,3 +1,4 @@
+import 'package:booklymvvm/Features/Splash/Presentation/Views/Widgets/Splashview_body.dart';
 import 'package:flutter/material.dart';
 
 class Splashview extends StatelessWidget {
@@ -5,6 +6,8 @@ class Splashview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body:SplashviewBody() ,
+    );
   }
 }
