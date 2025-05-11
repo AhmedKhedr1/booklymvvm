@@ -6,10 +6,10 @@ import 'package:go_router/go_router.dart';
 abstract class Approuter {
   static const String Khomeview = '/homeview';
   static const String Kbookdetailsview = '/bookdetailsview';
-  static const String Khome = '/';
+  static const String KSplashview = '/';
   static final router = GoRouter(routes: [
     GoRoute(
-      path: Khome,
+      path: KSplashview,
       builder: (context, state) => Splashview(),
     ),
     GoRoute(
