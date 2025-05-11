@@ -1,8 +1,9 @@
 // ignore_for_file: file_names
 
+import 'package:booklymvvm/Core/Utils/AppRouter.dart';
 import 'package:booklymvvm/Features/Home/presentation/views/Home_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashviewBody extends StatefulWidget {
   const SplashviewBody({super.key});
@@ -30,9 +31,8 @@ class _SplashviewBodyState extends State<SplashviewBody>
 
   Future<Null> navigatetoHome() {
     return Future.delayed(Duration(seconds: 3), () {
-    Get.to(() => HomeView(),
-        transition: Transition.fade, duration: Duration(milliseconds: 250));
-  });
+      GoRouter.of(context).push(Approuter.Khomeview);
+    });
   }
 
   @override
