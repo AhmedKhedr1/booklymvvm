@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 
 class Custom_listview_item extends StatelessWidget {
-  Custom_listview_item(
-     {this.width,
+  Custom_listview_item({
+    this.width,
     super.key,
   });
   double? width;

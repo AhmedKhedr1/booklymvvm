@@ -19,7 +19,7 @@ class BooklyApp extends StatelessWidget {
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
       debugShowCheckedModeBanner: false,
-      routerConfig:Approuter.router ,
+      routerConfig: Approuter.router,
     );
   }
 }

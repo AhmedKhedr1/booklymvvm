@@ -21,7 +21,8 @@ abstract class Approuter {
     GoRoute(
       path: Kbookdetailsview,
       builder: (context, state) => BookdetailsView(),
-    ),GoRoute(
+    ),
+    GoRoute(
       path: Ksearchview,
       builder: (context, state) => Searchview(),
     ),
