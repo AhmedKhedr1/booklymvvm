@@ -1,33 +1,33 @@
-import 'package:equatable/equatable.dart';
-
 import 'image_links.dart';
 import 'industry_identifier.dart';
 import 'panelization_summary.dart';
 import 'reading_modes.dart';
 
-class VolumeInfo extends Equatable {
-  final String? title;
-  final List<String>? authors;
-  final String? publisher;
-  final String? publishedDate;
-  final String? description;
-  final List<IndustryIdentifier>? industryIdentifiers;
-  final ReadingModes? readingModes;
-  final int? pageCount;
-  final String? printType;
-  final List<String>? categories;
-  final String? maturityRating;
-  final bool? allowAnonLogging;
-  final String? contentVersion;
-  final PanelizationSummary? panelizationSummary;
-  final ImageLinks? imageLinks;
-  final String? language;
-  final String? previewLink;
-  final String? infoLink;
-  final String? canonicalVolumeLink;
+class VolumeInfo {
+  String? title;
+  String? subtitle;
+  List<String>? authors;
+  String? publisher;
+  String? publishedDate;
+  String? description;
+  List<IndustryIdentifier>? industryIdentifiers;
+  ReadingModes? readingModes;
+  int? pageCount;
+  String? printType;
+  List<String>? categories;
+  String? maturityRating;
+  bool? allowAnonLogging;
+  String? contentVersion;
+  PanelizationSummary? panelizationSummary;
+  ImageLinks? imageLinks;
+  String? language;
+  String? previewLink;
+  String? infoLink;
+  String? canonicalVolumeLink;
 
-  const VolumeInfo({
+  VolumeInfo({
     this.title,
+    this.subtitle,
     this.authors,
     this.publisher,
     this.publishedDate,
@@ -50,6 +50,7 @@ class VolumeInfo extends Equatable {
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
         title: json['title'] as String?,
+        subtitle: json['subtitle'] as String?,
         authors: json['authors'] as List<String>?,
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,
@@ -82,6 +83,7 @@ class VolumeInfo extends Equatable {
 
   Map<String, dynamic> toJson() => {
         'title': title,
+        'subtitle': subtitle,
         'authors': authors,
         'publisher': publisher,
         'publishedDate': publishedDate,
@@ -102,29 +104,4 @@ class VolumeInfo extends Equatable {
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
       };
-
-  @override
-  List<Object?> get props {
-    return [
-      title,
-      authors,
-      publisher,
-      publishedDate,
-      description,
-      industryIdentifiers,
-      readingModes,
-      pageCount,
-      printType,
-      categories,
-      maturityRating,
-      allowAnonLogging,
-      contentVersion,
-      panelizationSummary,
-      imageLinks,
-      language,
-      previewLink,
-      infoLink,
-      canonicalVolumeLink,
-    ];
-  }
 }
