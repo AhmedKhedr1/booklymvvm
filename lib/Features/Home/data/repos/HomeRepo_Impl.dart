@@ -6,9 +6,7 @@ import 'package:dartz/dartz.dart';
 
 class HomerepoImpl implements HomeRepo {
   final ApiService apiService;
-
   HomerepoImpl({required this.apiService});
-
   @override
   Future<Either<Failure, List<Bookmodel>>> FetchVewestBooks() async {
     try {
@@ -21,13 +19,12 @@ class HomerepoImpl implements HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServerFailure());
+      return left(ServerFailure(''));
     }
   }
 
   @override
   Future<Either<Failure, List<Bookmodel>>> FetchFeaturedBooks() {
-    // TODO: implement FetchFeaturedBooks
     throw UnimplementedError();
   }
 }
